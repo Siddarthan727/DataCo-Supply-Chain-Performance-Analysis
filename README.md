@@ -2,13 +2,13 @@ DataCo Supply Chain Performance Analysis
 An end-to-end data analytics project on a global e-commerce supply chain dataset (~180,000 orders), covering data cleaning, exploratory data analysis, SQL-based business intelligence, and an interactive Power BI dashboard. The project surfaces actionable insights across revenue, delivery performance, product profitability, and customer behaviour.
 
 Project Structure
-├── DataCoSupplyChainDataset.csv   # Raw dataset (source)
-├── Data_Cleaning_script.ipynb     # Python data cleaning pipeline
-├── cleaned_dataset.csv            # Cleaned, analysis-ready dataset
-├── Create_Table.sql               # PostgreSQL table schema
-├── Analysis_query.sql             # Full SQL analysis (40+ queries)
-├── EDA.ipynb                      # Python EDA with statistical tests
-└── Datacopbi.pbix                 # Power BI dashboard
+1.DataCoSupplyChainDataset.csv   # Raw dataset (source)
+2.Data_Cleaning_script.ipynb     # Python data cleaning pipeline
+3.cleaned_dataset.csv            # Cleaned, analysis-ready dataset
+4.Create_Table.sql               # PostgreSQL table schema
+5.Analysis_query.sql             # Full SQL analysis (40+ queries)
+6.EDA.ipynb                      # Python EDA with statistical tests
+7.Datacopbi.pbix                 # Power BI dashboard
 
 Dataset Overview
 
@@ -73,33 +73,6 @@ Late delivery rate by shipping mode and market
 Category-level profitability breakdown
 Monthly revenue and profit trends
 Order status distribution
-
-
-How to Reproduce
-
-Load the data into PostgreSQL
-
-sql   -- Run Create_Table.sql first to create the schema
-   -- Then load cleaned_dataset.csv using \COPY or pgAdmin import
-   \COPY cleaned_dataset FROM 'cleaned_dataset.csv' DELIMITER ',' CSV HEADER;
-
-Run SQL analysis
-
-sql   -- Open Analysis_query.sql in pgAdmin or any PostgreSQL client and execute
-
-Run Python notebooks
-
-bash   pip install pandas numpy matplotlib seaborn scipy
-   jupyter notebook Data_Cleaning_script.ipynb
-   jupyter notebook EDA.ipynb
-
-Open Power BI dashboard
-
-Open Datacopbi.pbix in Power BI Desktop
-Update the data source path to point to cleaned_dataset.csv if prompted
-
-
-
 
 Business Recommendations
 ProblemRecommendation95% late delivery rate for First ClassRevise scheduled delivery promise from 1 day to 2 daysComputers sold below costAudit procurement pricing; raise selling price or discontinue the SKU$744K revenue lost to cancellationsInvestigate cancellation triggers; introduce order confirmation workflowsHigh Cleats cancellation volumeReview stock availability and return policy for footwear
